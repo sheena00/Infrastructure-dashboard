@@ -17,7 +17,7 @@ ORANGE = "#FF6B00"
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_excel("clean_data.xlsx")
+    df = pd.read_excel("data/clean/clean_data.xlsx")
     df = df[df["Country"] != "All Economies"].dropna(subset=["Year"])
     df["Year"] = df["Year"].astype(int)
     return df
@@ -133,3 +133,4 @@ for cat in categories:
 
     st.divider()
     
+
