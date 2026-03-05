@@ -1,10 +1,10 @@
 import pandas as pd
 import os
 
-folder_path = r"C:\Users\LENOVO\OneDrive - Apata Africa Limited\Desktop\python-dashboard"
+folder_path = r"...\infrastructure-dashboard\data\raw"
 
-# Adding category column to file
-# List of your Excel files and the category you want to assign
+
+# i had renamed my infrastructure files manually
 files = {
     "Water.xlsx": "Water",
     "Electricity.xlsx": "Electricity",
@@ -97,3 +97,4 @@ output_path = os.path.join(folder_path, "clean_data.xlsx")
 
 long_df.to_excel(output_path, index=False) #no extra column
 print("File saved successfully!")
+
